@@ -37,7 +37,3 @@ extension Int {
         return date
     }
 }
-
-//extension MKAnnotation {
-//    var isRunning: Bool { get set }
-//}

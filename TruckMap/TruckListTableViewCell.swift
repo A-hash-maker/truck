@@ -38,16 +38,17 @@ class TruckListTableViewCell: UITableViewCell {
             
             let value = item.lastRunningState?.stopStartTime ?? 0
             
-            let date = NSDate() // current date
+            let date = Date() // current date
             let unixtime = date.timeIntervalSince1970
             var epocTime = TimeInterval(value)
 
-            let myDate = NSDate(timeIntervalSince1970: epocTime)
+            let myDate = Date(timeIntervalSince1970: epocTime)
 //            println("Converted Time \(myDate)")
 //            myDate.
             
+            let days = daysBetween(start: myDate, end: Date())
             
-            lastUpdatedLbl.text = "\(myDate)"
+            lastUpdatedLbl.text = "Last Updated on \(days) before"
             
             if let status = item.lastRunningState?.truckRunningState {
                 if status == 0 {
@@ -57,10 +58,15 @@ class TruckListTableViewCell: UITableViewCell {
                 }
             }
             
-//            runningStateLbl.text =  "\(item.lastRunningState?.truckRunningState ?? 0)"
             speedRunningLbl.text = "\(item.lastWaypoint?.speed ?? 0)" + " Km/hr"
         }
     }
+    
+    
+    
+    func daysBetween(start: Date, end: Date) -> Int {
+            return Calendar.current.dateComponents([.day], from: start, to: end).day!
+        }
 
     
     

@@ -31,6 +31,7 @@ class NetworkManager {
                 print("Error -> \(error.localizedDescription)")
                 completion(nil, error)
             }
+            completion(nil, nil)
         }
     }
 }
