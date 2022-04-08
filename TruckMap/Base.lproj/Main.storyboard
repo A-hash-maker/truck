@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="izf-xD-L9T">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeViewController" customModule="TruckMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BvQ-dY-Der">
+                                <rect key="frame" x="0.0" y="138" width="414" height="758"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <mapView hidden="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bQu-ks-Lbp">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </mapView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="T7T-Fh-CXa">
+                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xhO-pg-xWU"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bQu-ks-Lbp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1jz-jX-BYI"/>
+                            <constraint firstAttribute="bottom" secondItem="bQu-ks-Lbp" secondAttribute="bottom" id="Kql-pF-1JK"/>
+                            <constraint firstItem="bQu-ks-Lbp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="O3A-c6-XE4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BvQ-dY-Der" secondAttribute="trailing" id="RxE-1o-q1c"/>
+                            <constraint firstItem="T7T-Fh-CXa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WhB-8V-fVO"/>
+                            <constraint firstItem="T7T-Fh-CXa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XmN-Wv-wJb"/>
+                            <constraint firstAttribute="bottom" secondItem="BvQ-dY-Der" secondAttribute="bottom" id="ZBU-pP-ArU"/>
+                            <constraint firstItem="BvQ-dY-Der" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iJW-08-BLc"/>
+                            <constraint firstItem="T7T-Fh-CXa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="moD-Ts-R4Z"/>
+                            <constraint firstItem="BvQ-dY-Der" firstAttribute="top" secondItem="T7T-Fh-CXa" secondAttribute="bottom" id="t4Q-wx-M0e"/>
+                            <constraint firstItem="bQu-ks-Lbp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yVa-pO-F2u"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0aT-Db-zd8">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="LY1-mD-7vz">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="dNX-aQ-r5F">
+                                <rect key="frame" x="302" y="5" width="92" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="But"/>
+                                <connections>
+                                    <action selector="flipBtnTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="INs-BA-Pd4"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="flipBtn" destination="dNX-aQ-r5F" id="2HH-VB-FI1"/>
+                        <outlet property="listTableView" destination="BvQ-dY-Der" id="omg-A8-FYj"/>
+                        <outlet property="mapView" destination="bQu-ks-Lbp" id="Ojx-iP-QEr"/>
+                        <outlet property="search" destination="T7T-Fh-CXa" id="Ja5-IL-ySP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="81.696428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ymn-cP-3J1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="izf-xD-L9T" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Dr-xb-7QC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KPh-VL-nrf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VcU-WG-EQE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

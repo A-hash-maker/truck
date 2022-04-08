@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0481159B27FEE9BE0027805F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481159A27FEE9BE0027805F /* AppDelegate.swift */; };
+		0481159D27FEE9BE0027805F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481159C27FEE9BE0027805F /* SceneDelegate.swift */; };
+		0481159F27FEE9BE0027805F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481159E27FEE9BE0027805F /* HomeViewController.swift */; };
+		048115A227FEE9BF0027805F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048115A027FEE9BE0027805F /* Main.storyboard */; };
+		048115A427FEE9C30027805F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048115A327FEE9C30027805F /* Assets.xcassets */; };
+		048115A727FEE9C30027805F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048115A527FEE9C30027805F /* LaunchScreen.storyboard */; };
+		048115AF27FF03390027805F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048115AE27FF03390027805F /* HomeViewModel.swift */; };
+		048115B127FF03D70027805F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048115B027FF03D70027805F /* NetworkManager.swift */; };
+		048115B327FF0CB10027805F /* TruckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048115B227FF0CB10027805F /* TruckViewModel.swift */; };
+		048115B627FF2B8E0027805F /* TruckListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048115B427FF2B8E0027805F /* TruckListTableViewCell.swift */; };
+		048115B727FF2B8E0027805F /* TruckListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048115B527FF2B8E0027805F /* TruckListTableViewCell.xib */; };
+		048115B927FF4B210027805F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048115B827FF4B210027805F /* Extensions.swift */; };
+		525507995A146F9A3380BFB6 /* Pods_TruckMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DF3319A0DC4E2A2ED19181 /* Pods_TruckMap.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0481159727FEE9BE0027805F /* TruckMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TruckMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0481159A27FEE9BE0027805F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0481159C27FEE9BE0027805F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0481159E27FEE9BE0027805F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		048115A127FEE9BE0027805F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		048115A327FEE9C30027805F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		048115A627FEE9C30027805F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		048115A827FEE9C30027805F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		048115AE27FF03390027805F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		048115B027FF03D70027805F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		048115B227FF0CB10027805F /* TruckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TruckViewModel.swift; sourceTree = "<group>"; };
+		048115B427FF2B8E0027805F /* TruckListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TruckListTableViewCell.swift; sourceTree = "<group>"; };
+		048115B527FF2B8E0027805F /* TruckListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TruckListTableViewCell.xib; sourceTree = "<group>"; };
+		048115B827FF4B210027805F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		59F0B5E9C4BEB77AA662E85D /* Pods-TruckMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TruckMap.release.xcconfig"; path = "Target Support Files/Pods-TruckMap/Pods-TruckMap.release.xcconfig"; sourceTree = "<group>"; };
+		847BAFA7BD4457E6C1B48E47 /* Pods-TruckMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TruckMap.debug.xcconfig"; path = "Target Support Files/Pods-TruckMap/Pods-TruckMap.debug.xcconfig"; sourceTree = "<group>"; };
+		88DF3319A0DC4E2A2ED19181 /* Pods_TruckMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TruckMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0481159427FEE9BE0027805F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				525507995A146F9A3380BFB6 /* Pods_TruckMap.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0481158E27FEE9BE0027805F = {
+			isa = PBXGroup;
+			children = (
+				0481159927FEE9BE0027805F /* TruckMap */,
+				0481159827FEE9BE0027805F /* Products */,
+				93DB435CE42A4A551BDC864A /* Pods */,
+				DBE3EDB002620AE1E206138B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0481159827FEE9BE0027805F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0481159727FEE9BE0027805F /* TruckMap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0481159927FEE9BE0027805F /* TruckMap */ = {
+			isa = PBXGroup;
+			children = (
+				0481159A27FEE9BE0027805F /* AppDelegate.swift */,
+				0481159C27FEE9BE0027805F /* SceneDelegate.swift */,
+				0481159E27FEE9BE0027805F /* HomeViewController.swift */,
+				048115AE27FF03390027805F /* HomeViewModel.swift */,
+				048115B827FF4B210027805F /* Extensions.swift */,
+				048115B427FF2B8E0027805F /* TruckListTableViewCell.swift */,
+				048115B527FF2B8E0027805F /* TruckListTableViewCell.xib */,
+				048115B227FF0CB10027805F /* TruckViewModel.swift */,
+				048115B027FF03D70027805F /* NetworkManager.swift */,
+				048115A027FEE9BE0027805F /* Main.storyboard */,
+				048115A327FEE9C30027805F /* Assets.xcassets */,
+				048115A527FEE9C30027805F /* LaunchScreen.storyboard */,
+				048115A827FEE9C30027805F /* Info.plist */,
+			);
+			path = TruckMap;
+			sourceTree = "<group>";
+		};
+		93DB435CE42A4A551BDC864A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				847BAFA7BD4457E6C1B48E47 /* Pods-TruckMap.debug.xcconfig */,
+				59F0B5E9C4BEB77AA662E85D /* Pods-TruckMap.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DBE3EDB002620AE1E206138B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88DF3319A0DC4E2A2ED19181 /* Pods_TruckMap.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0481159627FEE9BE0027805F /* TruckMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 048115AB27FEE9C30027805F /* Build configuration list for PBXNativeTarget "TruckMap" */;
+			buildPhases = (
+				5E44CE40B585B673E46BFE5C /* [CP] Check Pods Manifest.lock */,
+				0481159327FEE9BE0027805F /* Sources */,
+				0481159427FEE9BE0027805F /* Frameworks */,
+				0481159527FEE9BE0027805F /* Resources */,
+				C3BCDBE19C8D4783524A7D89 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TruckMap;
+			productName = TruckMap;
+			productReference = 0481159727FEE9BE0027805F /* TruckMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0481158F27FEE9BE0027805F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					0481159627FEE9BE0027805F = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 0481159227FEE9BE0027805F /* Build configuration list for PBXProject "TruckMap" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0481158E27FEE9BE0027805F;
+			productRefGroup = 0481159827FEE9BE0027805F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0481159627FEE9BE0027805F /* TruckMap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0481159527FEE9BE0027805F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				048115A727FEE9C30027805F /* LaunchScreen.storyboard in Resources */,
+				048115A427FEE9C30027805F /* Assets.xcassets in Resources */,
+				048115A227FEE9BF0027805F /* Main.storyboard in Resources */,
+				048115B727FF2B8E0027805F /* TruckListTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5E44CE40B585B673E46BFE5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TruckMap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3BCDBE19C8D4783524A7D89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TruckMap/Pods-TruckMap-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TruckMap/Pods-TruckMap-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TruckMap/Pods-TruckMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0481159327FEE9BE0027805F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				048115B327FF0CB10027805F /* TruckViewModel.swift in Sources */,
+				0481159F27FEE9BE0027805F /* HomeViewController.swift in Sources */,
+				0481159B27FEE9BE0027805F /* AppDelegate.swift in Sources */,
+				048115B927FF4B210027805F /* Extensions.swift in Sources */,
+				048115B627FF2B8E0027805F /* TruckListTableViewCell.swift in Sources */,
+				048115B127FF03D70027805F /* NetworkManager.swift in Sources */,
+				0481159D27FEE9BE0027805F /* SceneDelegate.swift in Sources */,
+				048115AF27FF03390027805F /* HomeViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		048115A027FEE9BE0027805F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				048115A127FEE9BE0027805F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		048115A527FEE9C30027805F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				048115A627FEE9C30027805F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		048115A927FEE9C30027805F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		048115AA27FEE9C30027805F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		048115AC27FEE9C30027805F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 847BAFA7BD4457E6C1B48E47 /* Pods-TruckMap.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TruckMap/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codechef.iOS.TruckMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		048115AD27FEE9C30027805F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59F0B5E9C4BEB77AA662E85D /* Pods-TruckMap.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TruckMap/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codechef.iOS.TruckMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0481159227FEE9BE0027805F /* Build configuration list for PBXProject "TruckMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				048115A927FEE9C30027805F /* Debug */,
+				048115AA27FEE9C30027805F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		048115AB27FEE9C30027805F /* Build configuration list for PBXNativeTarget "TruckMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				048115AC27FEE9C30027805F /* Debug */,
+				048115AD27FEE9C30027805F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0481158F27FEE9BE0027805F /* Project object */;
+}
