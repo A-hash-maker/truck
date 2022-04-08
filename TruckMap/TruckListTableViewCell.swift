@@ -24,9 +24,9 @@ class TruckListTableViewCell: UITableViewCell {
         didSet {
             truckNumberLbl.text = item.truckNumber
             
-            var value: Int = 0
-            
-            value = item.lastRunningState?.stopStartTime ?? 0
+//            var value: Int = 0
+//
+//            value = item.lastRunningState?.stopStartTime ?? 0
             
 //            print("Time here is \(value.getDateFromString())")
             
@@ -36,10 +36,28 @@ class TruckListTableViewCell: UITableViewCell {
 //                print("date from string is \(Int.getDateFromString())")
 //            }
             
+            let value = item.lastRunningState?.stopStartTime ?? 0
+            
+            let date = NSDate() // current date
+            let unixtime = date.timeIntervalSince1970
+            var epocTime = TimeInterval(value)
+
+            let myDate = NSDate(timeIntervalSince1970: epocTime)
+//            println("Converted Time \(myDate)")
+//            myDate.
             
             
-            lastUpdatedLbl.text = "\(item.lastRunningState?.stopStartTime ?? 0)"
-            runningStateLbl.text =  "\(item.lastRunningState?.truckRunningState ?? 0)"
+            lastUpdatedLbl.text = "\(myDate)"
+            
+            if let status = item.lastRunningState?.truckRunningState {
+                if status == 0 {
+                    runningStateLbl.text = "Stop"
+                }else {
+                    runningStateLbl.text = "Running"
+                }
+            }
+            
+//            runningStateLbl.text =  "\(item.lastRunningState?.truckRunningState ?? 0)"
             speedRunningLbl.text = "\(item.lastWaypoint?.speed ?? 0)" + " Km/hr"
         }
     }
