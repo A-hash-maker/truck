@@ -122,7 +122,7 @@ extension HomeViewModel: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-//        addAnnotation()
+        
     }
     
     
@@ -138,16 +138,19 @@ extension HomeViewModel: UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("Text Change is -> \(searchText)")
         guard let truckModel = truckViewModel else { return }
         
         truckArray.removeAll()
-        
-        for item in truckModel.data {
-            if item.truckNumber.contains(searchText) {
-                truckArray.append(item)
+        if searchText.count != 0 {
+            for item in truckModel.data {
+                if item.truckNumber.contains(searchText) {
+                    truckArray.append(item)
+                }
             }
+        }else {
+            truckArray = truckModel.data
         }
+        
         reloadTableView!()
         
     }

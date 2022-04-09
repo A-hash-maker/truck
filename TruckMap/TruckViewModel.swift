@@ -30,7 +30,7 @@ struct Truck {
     init(json: JSON) {
         truckNumber = json["truckNumber"].stringValue
         lastRunningState = LastRunningState(json: json["lastRunningState"])
-        lastRunningState = LastRunningState(json: json["lastRunningState"])
+        lastWaypoint = LastWayPoint(json: json["lastWaypoint"])
     }
     
 }
