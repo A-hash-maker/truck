@@ -24,8 +24,8 @@ struct TruckViewModel {
 struct Truck {
     
     var truckNumber: String!
-    var lastRunningState: LastRunningState?
-    var lastWaypoint: LastWayPoint?
+    var lastRunningState: LastRunningState!
+    var lastWaypoint: LastWayPoint!
     
     init(json: JSON) {
         truckNumber = json["truckNumber"].stringValue
@@ -57,6 +57,7 @@ struct LastWayPoint {
     var lat: Double!
     var ignitionOn: Bool!
     var createTime: Int!
+    var batteryPower: Bool!
     
     init(json: JSON) {
         lng = json["lng"].doubleValue
@@ -64,6 +65,7 @@ struct LastWayPoint {
         lat = json["lat"].doubleValue
         ignitionOn = json["ignitionOn"].boolValue
         createTime = json["createTime"].intValue
+        batteryPower = json["batteryPower"].boolValue
     }
     
 }

@@ -61,6 +61,21 @@ class HomeViewModel: NSObject {
                 let longitude = item.lastWaypoint?.lng ?? 0.0
                 let annotation = MKPointAnnotation()
                 annotation.coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees.init(latitute), longitude: CLLocationDegrees.init(longitude))
+                
+                if item.lastWaypoint?.speed != 0 {
+                    annotation.title = TruckStatus.running.rawValue
+//                    annotation.truckStatus = "running"
+                }else if item.lastWaypoint?.speed == 0 && item.lastWaypoint?.ignitionOn == true {
+                    annotation.title = TruckStatus.stopped.rawValue
+//                    annotation.truckStatus = "stopped"
+                }else if item.lastWaypoint?.speed == 0 && item.lastWaypoint?.ignitionOn == false {
+                    annotation.title = TruckStatus.idle.rawValue
+//                    annotation.truckStatus = "idle"
+                }else {
+                    annotation.title = TruckStatus.error.rawValue
+//                    annotation.truckStatus = "error"
+                }
+                
                 annotataionPoints.append(annotation)
             }
             updateMap!(annotataionPoints)
@@ -78,6 +93,14 @@ extension HomeViewModel: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "TruckListTableViewCell", for: indexPath) as? TruckListTableViewCell {
             cell.item = truckArray[indexPath.row]
+            cell.layer.masksToBounds = true
+            cell.layer.cornerRadius = 5
+            cell.layer.borderWidth = 0.5
+            cell.layer.shadowColor = AppColor.LIGHTGREYCOLOR.cgColor
+            cell.layer.shadowRadius = 0.5
+            cell.layer.shadowOffset = CGSize(width: -1, height: 1)
+            cell.layer.borderColor = AppColor.LIGHTGREYCOLOR.cgColor
+            cell.selectionStyle = .none
             return cell
         }
         return UITableViewCell()
@@ -92,7 +115,6 @@ extension HomeViewModel: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
 
         guard !(annotation is MKUserLocation) else {
                 return nil
@@ -105,17 +127,27 @@ extension HomeViewModel: MKMapViewDelegate {
             if let dequeuedAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier) {
                 annotationView = dequeuedAnnotationView
                 annotationView?.annotation = annotation
-            }
-            else {
+            }else {
                 let av = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
                 av.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
                 annotationView = av
             }
-
+        
             if let annotationView = annotationView {
                 // Configure your annotation view here
+                annotationView.image?.withRenderingMode(.alwaysTemplate)
                 annotationView.canShowCallout = true
-                annotationView.image = UIImage(named: "truck")
+                var image = UIImage()
+                if annotation.title == TruckStatus.running.rawValue {
+                    image = UIImage(named: "truck")!.withRenderingMode(.alwaysTemplate).colorized(color: AppColor.GREENCOLOR)
+                }else if annotation.title == TruckStatus.stopped.rawValue {
+                    image = UIImage(named: "truck")!.withRenderingMode(.alwaysTemplate).colorized(color: AppColor.BLUECOLOR)
+                }else if annotation.title == TruckStatus.idle.rawValue {
+                    image = UIImage(named: "truck")!.withRenderingMode(.alwaysTemplate).colorized(color: AppColor.YELLOWCOLOR)
+                }else if annotation.title == TruckStatus.error.rawValue {
+                    image = UIImage(named: "truck")!.withRenderingMode(.alwaysTemplate).colorized(color: AppColor.REDCOLOR)
+                }
+                annotationView.image = image
             }
 
             return annotationView
@@ -156,4 +188,32 @@ extension HomeViewModel: UISearchBarDelegate {
     }
     
     
+}
+
+//extension MKAnnotation {
+//
+//    var truckStatus: String! {
+//        get {
+//            return self.truckStatus
+//        }
+//        set(newValue) {
+//            self.truckStatus = newValue
+//        }
+//    }
+//}
+
+enum TruckStatus {
+    case running
+    case stopped
+    case idle
+    case error
+    
+    var rawValue: String {
+        switch self {
+        case .running: return "running"
+        case .stopped: return "stopped"
+        case .idle: return "idle"
+        case .error: return "error"
+        }
+    }
 }

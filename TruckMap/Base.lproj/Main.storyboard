@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="143" width="414" height="753"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <mapView hidden="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bQu-ks-Lbp">
+                            <mapView hidden="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bQu-ks-Lbp">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                             </mapView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="T7T-Fh-CXa">
@@ -32,9 +33,10 @@
                             </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <color key="backgroundColor" name="PrimaryColor"/>
                         <constraints>
                             <constraint firstItem="bQu-ks-Lbp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1jz-jX-BYI"/>
+                            <constraint firstItem="BvQ-dY-Der" firstAttribute="top" secondItem="T7T-Fh-CXa" secondAttribute="bottom" id="Gkl-qS-2dK"/>
                             <constraint firstAttribute="bottom" secondItem="bQu-ks-Lbp" secondAttribute="bottom" id="Kql-pF-1JK"/>
                             <constraint firstItem="bQu-ks-Lbp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="O3A-c6-XE4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BvQ-dY-Der" secondAttribute="trailing" id="RxE-1o-q1c"/>
@@ -43,30 +45,44 @@
                             <constraint firstAttribute="bottom" secondItem="BvQ-dY-Der" secondAttribute="bottom" id="ZBU-pP-ArU"/>
                             <constraint firstItem="BvQ-dY-Der" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iJW-08-BLc"/>
                             <constraint firstItem="T7T-Fh-CXa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="moD-Ts-R4Z"/>
-                            <constraint firstItem="BvQ-dY-Der" firstAttribute="top" secondItem="T7T-Fh-CXa" secondAttribute="bottom" id="t4Q-wx-M0e"/>
                             <constraint firstItem="bQu-ks-Lbp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yVa-pO-F2u"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0aT-Db-zd8">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="LY1-mD-7vz">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="dNX-aQ-r5F">
-                                <rect key="frame" x="302" y="5" width="92" height="34.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="LY1-mD-7vz">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="dNX-aQ-r5F">
+                                    <rect key="frame" x="302" y="5" width="92" height="34.5"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain"/>
+                                    <connections>
+                                        <action selector="flipBtnTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="INs-BA-Pd4"/>
+                                    </connections>
+                                </button>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Flip"/>
-                                <connections>
-                                    <action selector="flipBtnTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="INs-BA-Pd4"/>
-                                </connections>
-                            </button>
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="sAB-La-0XD">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="0qR-HO-2Gz">
+                                    <rect key="frame" x="202" y="5" width="92" height="34.5"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain"/>
+                                    <connections>
+                                        <action selector="searchBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KlP-Wr-lli"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="flipBtn" destination="dNX-aQ-r5F" id="2HH-VB-FI1"/>
                         <outlet property="listTableView" destination="BvQ-dY-Der" id="omg-A8-FYj"/>
                         <outlet property="mapView" destination="bQu-ks-Lbp" id="Ojx-iP-QEr"/>
                         <outlet property="search" destination="T7T-Fh-CXa" id="Ja5-IL-ySP"/>
+                        <outlet property="searchBarHeight" destination="xhO-pg-xWU" id="dms-Le-egX"/>
+                        <outlet property="searchBtn" destination="0qR-HO-2Gz" id="KIa-FM-n9s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -81,6 +97,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Dr-xb-7QC">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="PrimaryColor"/>
+                        <color key="tintColor" name="PrimaryColor"/>
+                        <color key="barTintColor" name="PrimaryColor"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -99,11 +118,11 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="PrimaryColor">
+            <color red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

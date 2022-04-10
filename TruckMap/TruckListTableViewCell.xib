@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,18 +23,18 @@
                             <constraint firstAttribute="height" constant="20.5" id="Faj-7i-hDu"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" name="PrimaryColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Updated" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9z-wC-wjJ">
-                        <rect key="frame" x="301" y="3" width="103" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="311.5" y="3" width="92.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Running State" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txi-eV-QFo">
-                        <rect key="frame" x="2" y="28.5" width="107" height="68.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="2" y="28.5" width="102" height="68.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -43,15 +44,24 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kvk-WN-aYq">
+                        <rect key="frame" x="113.5" y="4.5" width="18" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="18" id="GDw-U1-514"/>
+                            <constraint firstAttribute="height" constant="18" id="Y1v-b0-tST"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="txi-eV-QFo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="2" id="24i-Rm-mJx"/>
+                    <constraint firstItem="kvk-WN-aYq" firstAttribute="centerY" secondItem="YMC-q2-lnp" secondAttribute="centerY" id="5lc-EI-ePP"/>
+                    <constraint firstItem="kvk-WN-aYq" firstAttribute="leading" secondItem="YMC-q2-lnp" secondAttribute="trailing" constant="3" id="8C8-lL-sDC"/>
                     <constraint firstAttribute="trailing" secondItem="x9z-wC-wjJ" secondAttribute="trailing" constant="2" id="Aar-h3-DcD"/>
                     <constraint firstItem="txi-eV-QFo" firstAttribute="top" secondItem="YMC-q2-lnp" secondAttribute="bottom" constant="5" id="LF2-H7-P8Z"/>
                     <constraint firstItem="x9z-wC-wjJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="N8H-Av-tKo"/>
                     <constraint firstItem="IO2-E6-PuG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="txi-eV-QFo" secondAttribute="trailing" constant="10" id="PRe-N1-Szn"/>
                     <constraint firstItem="YMC-q2-lnp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="2" id="e3H-bw-7PW"/>
-                    <constraint firstItem="x9z-wC-wjJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YMC-q2-lnp" secondAttribute="trailing" constant="10" id="pTq-KH-Vcr"/>
+                    <constraint firstItem="x9z-wC-wjJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kvk-WN-aYq" secondAttribute="trailing" constant="20" id="rMe-5k-Pf3"/>
                     <constraint firstItem="YMC-q2-lnp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="u2y-r0-Mzt"/>
                     <constraint firstAttribute="bottom" secondItem="txi-eV-QFo" secondAttribute="bottom" constant="3" id="yGg-Ld-FfQ"/>
                     <constraint firstAttribute="trailing" secondItem="IO2-E6-PuG" secondAttribute="trailing" constant="2" id="zJr-lq-rFU"/>
@@ -63,9 +73,15 @@
                 <outlet property="lastUpdatedLbl" destination="x9z-wC-wjJ" id="QcC-R0-let"/>
                 <outlet property="runningStateLbl" destination="txi-eV-QFo" id="Tsf-Ye-pl7"/>
                 <outlet property="speedRunningLbl" destination="IO2-E6-PuG" id="KLi-J2-sK1"/>
+                <outlet property="truckBatteryImg" destination="kvk-WN-aYq" id="sOp-Ly-6kb"/>
                 <outlet property="truckNumberLbl" destination="YMC-q2-lnp" id="f3G-8v-GwC"/>
             </connections>
             <point key="canvasLocation" x="23.188405797101453" y="7.3660714285714279"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <namedColor name="PrimaryColor">
+            <color red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

@@ -19,6 +19,8 @@
 		048115B627FF2B8E0027805F /* TruckListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048115B427FF2B8E0027805F /* TruckListTableViewCell.swift */; };
 		048115B727FF2B8E0027805F /* TruckListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048115B527FF2B8E0027805F /* TruckListTableViewCell.xib */; };
 		048115B927FF4B210027805F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048115B827FF4B210027805F /* Extensions.swift */; };
+		0481A51D2801CE8700C7A5ED /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481A51C2801CE8700C7A5ED /* AppColor.swift */; };
+		0481A51F2801CED900C7A5ED /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0481A51E2801CED900C7A5ED /* Colors.xcassets */; };
 		525507995A146F9A3380BFB6 /* Pods_TruckMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DF3319A0DC4E2A2ED19181 /* Pods_TruckMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		048115B427FF2B8E0027805F /* TruckListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TruckListTableViewCell.swift; sourceTree = "<group>"; };
 		048115B527FF2B8E0027805F /* TruckListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TruckListTableViewCell.xib; sourceTree = "<group>"; };
 		048115B827FF4B210027805F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0481A51C2801CE8700C7A5ED /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		0481A51E2801CED900C7A5ED /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		59F0B5E9C4BEB77AA662E85D /* Pods-TruckMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TruckMap.release.xcconfig"; path = "Target Support Files/Pods-TruckMap/Pods-TruckMap.release.xcconfig"; sourceTree = "<group>"; };
 		847BAFA7BD4457E6C1B48E47 /* Pods-TruckMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TruckMap.debug.xcconfig"; path = "Target Support Files/Pods-TruckMap/Pods-TruckMap.debug.xcconfig"; sourceTree = "<group>"; };
 		88DF3319A0DC4E2A2ED19181 /* Pods_TruckMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TruckMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +81,7 @@
 			children = (
 				0481159A27FEE9BE0027805F /* AppDelegate.swift */,
 				0481159C27FEE9BE0027805F /* SceneDelegate.swift */,
+				0481A51C2801CE8700C7A5ED /* AppColor.swift */,
 				0481159E27FEE9BE0027805F /* HomeViewController.swift */,
 				048115AE27FF03390027805F /* HomeViewModel.swift */,
 				048115B827FF4B210027805F /* Extensions.swift */,
@@ -84,6 +89,7 @@
 				048115B527FF2B8E0027805F /* TruckListTableViewCell.xib */,
 				048115B227FF0CB10027805F /* TruckViewModel.swift */,
 				048115B027FF03D70027805F /* NetworkManager.swift */,
+				0481A51E2801CED900C7A5ED /* Colors.xcassets */,
 				048115A027FEE9BE0027805F /* Main.storyboard */,
 				048115A327FEE9C30027805F /* Assets.xcassets */,
 				048115A527FEE9C30027805F /* LaunchScreen.storyboard */,
@@ -169,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0481A51F2801CED900C7A5ED /* Colors.xcassets in Resources */,
 				048115A727FEE9C30027805F /* LaunchScreen.storyboard in Resources */,
 				048115A427FEE9C30027805F /* Assets.xcassets in Resources */,
 				048115A227FEE9BF0027805F /* Main.storyboard in Resources */,
@@ -233,6 +240,7 @@
 				048115B127FF03D70027805F /* NetworkManager.swift in Sources */,
 				0481159D27FEE9BE0027805F /* SceneDelegate.swift in Sources */,
 				048115AF27FF03390027805F /* HomeViewModel.swift in Sources */,
+				0481A51D2801CE8700C7A5ED /* AppColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
