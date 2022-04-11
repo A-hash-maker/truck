@@ -55,15 +55,19 @@ extension UIImage {
         
         let rect = CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height)
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
+        
         let context = UIGraphicsGetCurrentContext()
-        context!.setBlendMode(.multiply)
-//        CGContext.draw
-//        CGContextDrawImage(context, rect, self.cgImage)
+        context!.setBlendMode(.normal)
+        context!.draw(self.cgImage!, in: rect, byTiling: false)
         context!.clip(to: rect, mask: self.cgImage!)
+        
+//        let flipVertical: CGAffineTransform = CGAffineTransform(a: 1, b: 0, c: 0, d: -1, tx: 0, ty: self.size.height)
+//
+//        context!.concatenate(flipVertical)
         context!.setFillColor(color.cgColor)
         context!.fill(rect)
-        let colorizedImage = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
+        let colorizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
         return colorizedImage!
     }
 }

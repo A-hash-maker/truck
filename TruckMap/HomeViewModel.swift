@@ -119,7 +119,7 @@ extension HomeViewModel: MKMapViewDelegate {
         guard !(annotation is MKUserLocation) else {
                 return nil
             }
-
+        
             // Better to make this class property
             let annotationIdentifier = "AnnotationIdentifier"
 
@@ -139,17 +139,31 @@ extension HomeViewModel: MKMapViewDelegate {
                 annotationView.canShowCallout = true
                 var image = UIImage()
                 if annotation.title == TruckStatus.running.rawValue {
-                    image = UIImage(named: "truck")!.withRenderingMode(.alwaysTemplate).colorized(color: AppColor.GREENCOLOR)
+//                    image = UIImage(named: "truck")!.withTintColor(AppColor.GREENCOLOR)
+                    image = UIImage(named: "truck")!.colorized(color: AppColor.GREENCOLOR)
+//                    colorized
+                    annotationView.tintColor = AppColor.GREENCOLOR
                 }else if annotation.title == TruckStatus.stopped.rawValue {
-                    image = UIImage(named: "truck")!.withRenderingMode(.alwaysTemplate).colorized(color: AppColor.BLUECOLOR)
+//                    image = UIImage(named: "truck")!.withTintColor(AppColor.BLUECOLOR)
+                    
+                    image = UIImage(named: "truck")!.colorized(color: AppColor.BLUECOLOR)
+                    
+                    annotationView.tintColor = AppColor.BLUECOLOR
                 }else if annotation.title == TruckStatus.idle.rawValue {
-                    image = UIImage(named: "truck")!.withRenderingMode(.alwaysTemplate).colorized(color: AppColor.YELLOWCOLOR)
+//                    image = UIImage(named: "truck")!.withTintColor(AppColor.YELLOWCOLOR)
+                    
+                    image = UIImage(named: "truck")!.colorized(color: AppColor.YELLOWCOLOR)
+                    
+                    annotationView.tintColor = AppColor.YELLOWCOLOR
                 }else if annotation.title == TruckStatus.error.rawValue {
-                    image = UIImage(named: "truck")!.withRenderingMode(.alwaysTemplate).colorized(color: AppColor.REDCOLOR)
+//                    image = UIImage(named: "truck")!.withTintColor(AppColor.REDCOLOR)
+                    
+                    image = UIImage(named: "truck")!.colorized(color: AppColor.REDCOLOR)
+                    
+                    annotationView.tintColor = AppColor.REDCOLOR
                 }
                 annotationView.image = image
             }
-
             return annotationView
     }
     

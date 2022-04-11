@@ -39,7 +39,9 @@ class HomeViewController: UIViewController {
         search.delegate = viewModel
         search.placeholder = "Enter Truck Number"
         
-        flipBtn.setImage(UIImage(named: "map"), for: .normal)
+        flipBtn.setImage(UIImage(named: "map")!.withTintColor(AppColor.ACCENTCOLOR), for: .normal)
+        
+//        flipBtn.setImage(UIImage(named: "map")!.withRenderingMode(.alwaysTemplate).colorized(color: AppColor.ACCENTCOLOR), for: .normal)
         searchBtn.setImage(UIImage(named: "search"), for: .normal)
         searchBarHeight.constant = 0
         
@@ -91,14 +93,18 @@ class HomeViewController: UIViewController {
         let camera = MKMapCamera(lookingAtCenter: annotionPoints[0].coordinate, fromDistance: CLLocationDistance(200), pitch: 100, heading: CLLocationDirection.init(100))
         mapView.setCamera(camera, animated: true)
         
+        let coordinate = annotionPoints[0].coordinate
+        
+        let region = mapView.regionThatFits(MKCoordinateRegion(center: coordinate, latitudinalMeters: 500, longitudinalMeters: 500))
+        
+//        let region = self.mapView.regionThatFits(MKCoordinateRegion(center: coordinate, latitudinalMeters: 200, longitudinalMeters: 200))
+//        self.mapView.setRegion(region, animated: true)
+        mapView.setRegion(region, animated: true)
+
         mapView.showAnnotations(annotionPoints, animated: true)
         print("Total Annotations is \(mapView.annotations)")
         
     }
-    
-    
-    
-    
     
     
     @IBAction func flipBtnTapped(sender: UIButton) {
@@ -106,9 +112,11 @@ class HomeViewController: UIViewController {
         setView(view: mapView, hidden: !mapView.isHidden)
         setView(view: listTableView, hidden: !listTableView.isHidden)
         if search.isHidden {
-            flipBtn.setImage(UIImage(named: "list"), for: .normal)
+            flipBtn.setImage(UIImage(named: "list")!.withTintColor(AppColor.ACCENTCOLOR), for: .normal)
+            searchBtn.isHidden = true
         }else {
-            flipBtn.setImage(UIImage(named: "map"), for: .normal)
+            flipBtn.setImage(UIImage(named: "map")!.withTintColor(AppColor.ACCENTCOLOR), for: .normal)
+            searchBtn.isHidden = false
         }
     }
     
@@ -124,7 +132,7 @@ class HomeViewController: UIViewController {
     
     
     func setView(view: UIView, hidden: Bool) {
-        UIView.transition(with: view, duration: 0.5, options: .transitionCrossDissolve, animations: {
+        UIView.transition(with: view, duration: 0.1, options: .transitionCrossDissolve, animations: {
             view.isHidden = hidden
         })
     }
